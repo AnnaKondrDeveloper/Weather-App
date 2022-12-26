@@ -22,12 +22,14 @@ function addWeatherToPage(data){
 	weather.classList.add('weather');
 
 	weather.innerHTML = 	`	
+	<div class="container">
 	<h3>${data.name}</h3>
 	<h2>
 	<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" /> 
 	${temp}°C <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" />
 	</h2>
-	<small>${data.weather[0].main}</small>`;
+	<small>${data.weather[0].main}</small>
+	</div>`;
 
  //   cleanup 
 	main.innerHTML= "";
